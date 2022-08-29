@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "feather-icons": "4",
     "pinia": "^2.0.21",
     "vue": "^3.2.37",
+    "vue-feather": "2",
     "vue-router": "4"
   },
   "devDependencies": {

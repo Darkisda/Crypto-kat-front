@@ -10,12 +10,15 @@ onBeforeMount(async () => {
 </script>
 
 <template>
-  <div class="w-full h-screen bg-custom overflow-hidden">
+  <div class="w-full h-screen bg-custom relative lg:overflow-hidden">
     <router-view v-slot="{ Component }">
       <transition name="route" mode="out-in">
         <component :is="Component" />
       </transition>
     </router-view>
+    <footer class="w-full text-center py-3 bg-black absolute z-20 bottom-0">
+      <p class="text-white">Made with 🧡</p>
+    </footer> 
   </div>
 </template>
 
@@ -39,11 +42,18 @@ onBeforeMount(async () => {
 }
 
 .route-enter-active {
+  opacity: 1;
   transition: all 1s ease-out;
 }
 
 .route-leave-from {
   opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.route-leave-active {
+  opacity: 0;
+  transition: all 1s ease-out;
   transform: translateY(-100%);
 }
 </style>

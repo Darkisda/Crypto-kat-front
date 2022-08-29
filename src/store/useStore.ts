@@ -5,6 +5,12 @@ import { Service } from "../adapters/service";
 
 export const useStore = defineStore("main", {
   state: (): Model[] => [],
+  getters: {
+    findByAbbreviation: (state) => {
+      return (abrreviation: string) =>
+        state.find((model) => model.coin_abbreviation === abrreviation);
+    },
+  },
   actions: {
     async findAll() {
       const service = new Service();

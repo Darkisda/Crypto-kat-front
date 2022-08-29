@@ -26,11 +26,11 @@ const store = useStore();
             abbreviation: coin.coin_abbreviation,
           },
         }"
-        class="border-2 border-green-100 rounded-full px-8 text-lg text-white"
+        class="border-2 border-green-100 bg-green-400/70 backdrop-blur-md rounded-full px-8 text-lg text-white transition-all duration-300 hover:bg-green-600/50"
         v-for="coin in store.$state"
         v-bind:key="coin.id"
       >
-        {{ coin.coin_title }}
+          {{ coin.coin_title }}
       </router-link>
     </div>
   </div>
