@@ -11,7 +11,7 @@ const store = useStore();
   >
     <div class="w-full flex flex-col items-center justify-center">
       <div class="flex items-center justify-center gap-8 flex-wrap">
-        <h1 class="text-white text-5xl font-bold text-center">KryptoKat</h1>
+        <h1 class="text-white text-5xl font-bold text-center">CryptoKat</h1>
         <Cat />
       </div>
       <p class="text-lg text-white my-2 text-center">
